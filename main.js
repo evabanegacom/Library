@@ -35,7 +35,7 @@ function addBookToLibrary(book) {
     list.appendChild(row)
 }
 
-function addNewBook(book){
+function addNewBook(){
     document.querySelector('#book-form').addEventListener('submit', (e) => {
 
         e.preventDefault();
@@ -50,10 +50,17 @@ function addNewBook(book){
     });
 }
 
-function removeBook() {
-    // do stuff here
+function removeBook(ele) {
+    if(ele.classList.contains('delete')){
+            ele.parentElement.parentElement.remove()
+        }
 }
 
+function removeBookInfo () {
+  document.querySelector('#book-list').addEventListener('click', (e) =>  {
+      removeBook(e.target)
+  });
+}
 
 function render() {
     myLibrary.forEach((book) => addBookToLibrary(book) )   
@@ -62,3 +69,5 @@ function render() {
 render();
 
 addNewBook();
+
+removeBookInfo();
