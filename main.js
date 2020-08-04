@@ -20,7 +20,6 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary(book) {
-    // do stuff here
     const list = document.querySelector('#book-list');
 
     const row = document.createElement('tr');
