@@ -32,12 +32,16 @@ function addBookToLibrary(book) {
             <td>${book.read}</td>
             <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>
         `;
-        
+
     list.appendChild(row)
 }
 
+function addNewBook(){
+
+}
+
 function removeBook() {
-    // do stuff here
+
 }
 
 
