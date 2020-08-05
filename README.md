@@ -14,7 +14,7 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 Library -- [Librarian]
-This project is part of the Microverse curriculum in Ruby on Rails module!
+This project is part of the Microverse curriculum in Javascript module!
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
