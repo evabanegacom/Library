@@ -21,9 +21,8 @@ function Book(title, author, pages, read) {
 
 function addBookToLibrary(book) {
     const list = document.querySelector('#book-list');
-
     const row = document.createElement('tr');
-
+    book.read = document.getElementById("read").checked
     row.innerHTML = `
             <td>${book.title}</td>
             <td>${book.author}</td>
@@ -62,6 +61,7 @@ function removeBookInfo () {
   });
 }
 
+
 function render() {
     myLibrary.forEach((book) => addBookToLibrary(book) )   
 }
@@ -71,3 +71,4 @@ render();
 addNewBook();
 
 removeBookInfo();
+
