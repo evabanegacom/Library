@@ -47,6 +47,14 @@ function addBookToLibrary(book) {
             }
         }
     })
+
+    
+}
+function clearfields(){
+    document.querySelector('#title').value = ''
+    document.querySelector('#author').value = ''
+    document.querySelector('#pages').value = ''
+    document.querySelector('#read').checked = false
 }
 
 function addNewBook(){
@@ -54,15 +62,23 @@ function addNewBook(){
 
         e.preventDefault();
 
-        const title = document.querySelector('#title').value
-        const author = document.querySelector('#author').value
-        const pages = document.querySelector('#pages').value
-        const read = document.querySelector('#read').value
-        const book = new Book(title, author, pages, read);
+        let title = document.querySelector('#title').value
+        let author = document.querySelector('#author').value
+        let pages = document.querySelector('#pages').value
+        let read = document.querySelector('#read').value
+        let book = new Book(title, author, pages, read);
         addBookToLibrary(book)
 
+        clearfields()
+
+        
+
     });
+    
 }
+
+
+
 
 function removeBook(ele) {
     if(ele.classList.contains('delete')){
@@ -88,5 +104,7 @@ render();
 addNewBook();
 
 removeBookInfo();
+
+
 
 
