@@ -48,7 +48,7 @@ To have this app on your pc, you need to:
 # Live Demo
 - (https://raw.githack.com/evabanegacom/Library/feature/index.html)
 
-- (images/library.png)
+![Screenshot](images/library.png)
 
 ### Built With
 This project was built using these technologies.
