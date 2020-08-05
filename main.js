@@ -27,11 +27,26 @@ function addBookToLibrary(book) {
             <td>${book.title}</td>
             <td>${book.author}</td>
             <td>${book.pages}</td>
-            <td>${book.read}</td>
+            <td> <button class="btn btn-info" id="status"> ${book.read} </button></td>
+            
             <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>
         `;
 
     list.appendChild(row)
+
+    document.querySelector('body').addEventListener('click', (e) => {
+        
+        if (e.target.id === 'status') {
+            e.preventDefault()
+            if (book.read === false) {
+                 book.read = true
+                 e.target.innerHTML = 'true'
+            } else {
+                book.read = false
+                e.target.innerHTML = 'false'
+            }
+        }
+    })
 }
 
 function addNewBook(){
@@ -55,6 +70,7 @@ function removeBook(ele) {
         }
 }
 
+
 function removeBookInfo () {
   document.querySelector('#book-list').addEventListener('click', (e) =>  {
       removeBook(e.target)
@@ -64,6 +80,7 @@ function removeBookInfo () {
 
 function render() {
     myLibrary.forEach((book) => addBookToLibrary(book) )   
+    
 }
 
 render();
@@ -71,4 +88,5 @@ render();
 addNewBook();
 
 removeBookInfo();
+
 
